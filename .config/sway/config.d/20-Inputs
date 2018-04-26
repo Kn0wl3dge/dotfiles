@@ -1,0 +1,17 @@
+###
+# Inputs
+################################################################################
+input * {
+    xkb_layout fr
+    xkb_options compose:prsc
+}
+
+input 1739:52596:SYNA30B6:00_06CB:CD74_Touchpad {
+      click_method clickfinger
+      drag enabled
+      dwt enabled
+}
+
+set $laptop eDP-1
+bindswitch --reload lid:on output $laptop disable
+bindswitch --reload lid:off output $laptop enable

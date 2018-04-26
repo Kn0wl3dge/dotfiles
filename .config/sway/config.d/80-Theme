@@ -1,0 +1,38 @@
+###
+# Theming
+################################################################################
+output "*" bg "/usr/share/wallpapers/wallpaper.png" fill
+
+# Border
+default_border pixel 1
+
+# Default configuraiton
+font pango:DejaVu Sans Mono 8
+
+# Specifies an outer gaps
+gaps outer 0
+gaps inner 10
+smart_borders on
+smart_gaps on
+
+bar {
+    swaybar_command waybar
+}
+
+seat seat0 xcursor_theme Breeze_Snow
+set $gnome-scheme org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-scheme gtk-theme 'Kripton'
+    gsettings set $gnome-scheme icon-theme 'Kripton'
+    gsettings set $gnome-scheme cursor-theme 'Breeze'
+}
+
+# Colors
+# class                 border  bground text    indicator child_border
+client.focused          #115FE2c0 #115FE2c0 #FFFFFF #115FE2c0   #115FE2c0
+client.focused_inactive #2F343Fc0 #2F343Fc0 #FFFFFF #2F343Fc0   #2F343Fc0
+client.unfocused        #1F2128c0 #1F2128c0 #FFFFFF #1F2128c0   #1F2128c0
+client.urgent           #BF1717c0 #BF1717c0 #FFFFFF #BF1717c0   #BF1717c0
+client.placeholder      #0C0C0Cc0 #0C0C0Cc0 #FFFFFF #000000c0   #0C0C0Cc0
+
+client.background       #FFFFFFc0

@@ -1,0 +1,15 @@
+###
+# Idle
+################################################################################
+exec swayidle -w \
+	timeout 300 'swaylock -f -F -i /usr/share/wallpapers/lock-wallpaper.png' \
+	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -F -i /usr/share/wallpapers/lock-wallpaper.png'
+
+
+###
+# Other
+################################################################################
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec --no-startup-id 'nm-tray --indicator'
+exec --no-startup-id lxpolkit
