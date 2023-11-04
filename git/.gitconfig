@@ -1,3 +1,6 @@
 [user]
 	email = baptistin+github@boilot.fr
 	name = Baptistin Boilot
+	signingKey = E25C86124AF17ED8
+[commit]
+	gpgsign = true
